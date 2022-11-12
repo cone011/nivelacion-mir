@@ -15,3 +15,6 @@
 15.Para agregar los archvios o archivo: git add . o nombre del archivo sin el punto
 16.Para commitear: git commit -m 'Version Incial'
 17.Agregar al readme los comandos que se utilizaron
+Para agregar archivos que estuvieron ya commiteados: git commit -am
+Para enlazar el git local al repositorio github: git remote add origin https://github.com/cone011/nivelacion-mir.git
+para renombrar una rama:git branch -M main
