@@ -21,6 +21,18 @@
   float: right;
 }
 
+@media screen and (max-width: 500px) {
+  .formulario {
+    width: 300px;
+    padding: 40px;
+    border-radius: 20px;
+    margin: 0 auto;
+    color: white;
+    background: linear-gradient(#bd09b7, #6b4cf5);
+    box-shadow: 2px 2px 3px 1px grey;
+  }
+}
+
 @media (min-width: 500px) and (max-width: 1000px) {
   .formulario {
     width: 300px;
