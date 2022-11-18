@@ -19,8 +19,8 @@ console.log(bmi(52, 1.75));
 
 //Ejercio3
 function sum(numero) {
-  var count = 0;
-  var suma = 0;
+  let count = 0;
+  let suma = 0;
   while (count <= numero) {
     suma = suma + count;
     count = count + 1;
@@ -34,7 +34,7 @@ console.log(sum(15));
 
 //Ejercicio4
 function calcularColor(numero) {
-  var color;
+  let color;
   if (numero === 1) {
     color = "black";
   } else if (numero === 2) {
