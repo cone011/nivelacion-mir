@@ -51,3 +51,33 @@ console.log(calcularColor(1));
 console.log(calcularColor(2));
 console.log(calcularColor(3));
 console.log(calcularColor(8));
+
+//Ejercicio Bous
+
+const abeceradio = "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z";
+const mayusculaAbecedario = abeceradio.toUpperCase().split(",");
+
+function encriptar(texto) {
+  let formateoTexto = texto.trim().toUpperCase();
+  let retornarValor = "";
+
+  for (const key in formateoTexto) {
+    if (
+      mayusculaAbecedario.findIndex((item) => item === formateoTexto[key]) === 0
+    )
+      retornarValor = retornarValor + "Z";
+
+    if (
+      mayusculaAbecedario.findIndex((item) => item === formateoTexto[key]) > 0
+    ) {
+      let posicionAbecedario = mayusculaAbecedario.findIndex(
+        (item) => item === formateoTexto[key]
+      );
+      retornarValor =
+        retornarValor + mayusculaAbecedario[posicionAbecedario - 1];
+    }
+  }
+  return retornarValor;
+}
+console.log(encriptar("Hola Mundo"));
+console.log(encriptar("Preparacion programa"));
