@@ -63,11 +63,6 @@ function encriptar(texto) {
 
   for (const key in formateoTexto) {
     if (
-      mayusculaAbecedario.findIndex((item) => item === formateoTexto[key]) === 0
-    )
-      retornarValor = retornarValor + "Z";
-
-    if (
       mayusculaAbecedario.findIndex((item) => item === formateoTexto[key]) > 0
     ) {
       let posicionAbecedario = mayusculaAbecedario.findIndex(
@@ -75,6 +70,10 @@ function encriptar(texto) {
       );
       retornarValor =
         retornarValor + mayusculaAbecedario[posicionAbecedario - 1];
+    } else if (
+      mayusculaAbecedario.findIndex((item) => item === formateoTexto[key]) === 0
+    ) {
+      retornarValor = retornarValor + "Z";
     }
   }
   return retornarValor;
