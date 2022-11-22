@@ -60,3 +60,28 @@ function join(arr) {
 console.log(join(["Hola", "Mundo"]));
 console.log(join(["Make", "It", "Real"]));
 console.log(join([]));
+
+let matriz = function GenerateMatriz(numero) {
+  let arr = [];
+  for (let recorrer = 0; recorrer < numero; recorrer++) {
+    let items = [];
+    for (let recorrerColumna = 0; recorrerColumna < numero; recorrerColumna++) {
+      items.push(0);
+    }
+    arr.push(items);
+  }
+
+  var spiralMatriz = function generateSpiralMatriz(arr) {
+    let count = 1;
+    let topRow = 0; //top Row
+    let endRow = arr.length; //end Row
+    let topColumn = 0; //top column
+    let endColumn = arr[0].length; //end column
+
+    return spiralMatriz(arr);
+  };
+};
+
+console.log(matriz(2));
+console.log(matriz(3));
+console.log(matriz(4));
