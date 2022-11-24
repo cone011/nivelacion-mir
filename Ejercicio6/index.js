@@ -1,4 +1,4 @@
-let pedro = {
+const pedro = {
   nombre: "Pedro Perez",
   edad: 30,
   activo: true,
@@ -7,7 +7,9 @@ let pedro = {
 
 console.log(pedro.edad);
 
-pedro = { ...pedro, estatura: 1.8 };
+//pedro = { ...pedro, estatura: 1.8 };
+
+pedro.estatura = 1.8;
 
 console.log(pedro);
 
@@ -15,7 +17,7 @@ delete pedro.activo;
 
 console.log(pedro);
 
-for (var key in pedro) {
+for (let key in pedro) {
   if (pedro.hasOwnProperty(key)) {
     console.log(`{${key}} : ${pedro[key]}`);
   }
@@ -30,7 +32,7 @@ console.log(saludo(pedro.nombre));
 function productosBaratos(productos) {
   let arrProducto = [];
   if (productos.length === 0) return arrProducto;
-  for (const key in productos) {
+  for (let key in productos) {
     if (productos[key].precio >= 5 && productos[key].precio <= 10) {
       arrProducto.push(productos[key].nombre);
     }
@@ -48,7 +50,7 @@ console.log(productosBaratos(prods));
 
 function frecuencias(palabra) {
   let arrObject = [];
-  for (const key in palabra) {
+  for (let key in palabra) {
     if (palabra[key] !== " ") {
       if (arrObject.find((item) => item.letra === palabra[key])) {
         const index = arrObject.findIndex(
@@ -60,6 +62,7 @@ function frecuencias(palabra) {
       }
     }
   }
+
   return arrObject;
 }
 
